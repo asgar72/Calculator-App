@@ -13,7 +13,7 @@ import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btn00,
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0,
             btnClear, btnMod, btnDel, btnDiv, btnMul, btnSub, btnAdd, btnDot, btnEqual;
     TextView OutputTxt, inputTxt;
 
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         btn8 = findViewById(R.id.btn8);
         btn9 = findViewById(R.id.btn9);
         btn0 = findViewById(R.id.btn0);
-        btn00 = findViewById(R.id.btn00);
         btnDot = findViewById(R.id.btnDot);
         btnAdd = findViewById(R.id.btnAdd);
         btnClear = findViewById(R.id.btnClear);
@@ -127,16 +126,6 @@ public class MainActivity extends AppCompatActivity {
                 inputTxt.setText(data + "0");
             }
         });
-
-        btn00.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                data = inputTxt.getText().toString();
-                inputTxt.setText(data + "00");
-            }
-        });
-
-
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
